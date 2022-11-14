@@ -4,7 +4,9 @@
   "scripts": {
     "build": "node script.js && rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
@@ -29,6 +31,8 @@
     "ejs": "^3.1.7",
     "jsdom": "^16.2.2",
     "showdown": "^1.9.1",
-    "sirv-cli": "^0.4.6"
-  }
+    "sirv-cli": "^0.4.6",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
